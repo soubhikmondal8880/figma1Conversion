@@ -6,10 +6,9 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
+ 
   color: #333;
   line-height: 1.6;
-  padding-top: 70px; /* Space for fixed navbar and toggle on mobile */
 }
 
 a {
@@ -34,8 +33,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .logo img {
@@ -47,8 +44,7 @@ ul {
   background: none;
   border: none;
   color: #fff;
-  display: none;
-  cursor: pointer;
+  display: none; 
 }
 
 .navList {
@@ -104,7 +100,6 @@ ul {
   transform: translateY(-50%);
   color: white;
   max-width: 600px;
-  padding-right: 60px; /* Prevent overlap with toggle on mobile */
 }
 
 .banner-content h1 {
@@ -144,15 +139,43 @@ ul {
   gap: 40px;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .logo-container img {
   height: 50px;
+}
+
+.image-logo {
   background-color: white;
-  padding: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+ display: block;
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 1000;
+ 
+  }
+  .navList {
+    display: none; 
+  }
+  .banner-content {
+    top: 40%;
+    left: 5%;
+    max-width: 90%;
+  }
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+  .logo-container {
+    gap: 20px;
+  }
+  .logo-container img {
+    height: 40px;
+  }
 }
 
 /* Features Section */
@@ -178,6 +201,7 @@ ul {
   line-height: 1.6;
 }
 
+/* Cards layout */
 .features-cards {
   display: flex;
   gap: 20px;
@@ -191,7 +215,6 @@ ul {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 320px;
-  width: 100%;
 }
 
 .card img {
@@ -216,6 +239,7 @@ ul {
   color: #444;
 }
 
+/* Arrows */
 .arrow-buttons {
   margin-bottom: 1px;
   margin-left: 85%;
@@ -232,6 +256,32 @@ ul {
 
 .arrow:hover {
   background-color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .features-section {
+    padding: 40px 10px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
+  .section-subtitle {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .features-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 90%;
+  }
+  .arrow-buttons {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 /* Stats Section */
@@ -274,6 +324,7 @@ ul {
   background-color: #3c5f51;
 }
 
+/* Stats Grid */
 .stats-grid {
   display: flex;
   justify-content: space-between;
@@ -325,6 +376,27 @@ ul {
   color: #fff;
 }
 
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .stats-section {
+    padding: 40px 10px;
+  }
+  .stats-title {
+    font-size: 1.5rem;
+  }
+  .stats-subtitle {
+    max-width: 100%;
+  }
+  .stats-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-box {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
 /* Pricing Section */
 .pricing-section {
   background: linear-gradient(to bottom, #323335, #cfd8dc);
@@ -339,6 +411,7 @@ ul {
   font-weight: 700;
 }
 
+/* Main highlighted card */
 .pricing-main-card {
   display: flex;
   flex-wrap: wrap;
@@ -388,6 +461,7 @@ ul {
   color: #666;
 }
 
+/* Grid of smaller pricing cards */
 .pricing-grid {
   display: flex;
   flex-wrap: wrap;
@@ -430,6 +504,46 @@ ul {
   color: #333;
 }
 
+/* Reuse green button style */
+.green-btn {
+  background-color: #369292;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.green-btn:hover {
+  background-color: #2f7f7f;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .pricing-section {
+    padding: 40px 10px;
+  }
+  .pricing-title {
+    font-size: 1.5rem;
+  }
+  .pricing-main-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-left, .main-right {
+    text-align: center;
+  }
+  .pricing-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing-card {
+    max-width: 100%;
+  }
+}
+
 /* Foundation Section */
 .foundation-section {
   background-color: #242323;
@@ -453,6 +567,7 @@ ul {
   line-height: 1.6;
 }
 
+/* Card slider layout */
 .foundation-slider {
   display: flex;
   align-items: center;
@@ -525,6 +640,26 @@ ul {
   font-size: 1.2rem;
 }
 
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .foundation-section {
+    padding: 40px 10px;
+  }
+  .foundation-title {
+    font-size: 1.5rem;
+  }
+  .foundation-subtitle {
+    max-width: 100%;
+  }
+  .foundation-cards {
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+  .foundation-card {
+    width: 85vw;
+  }
+}
+
 /* Guarantee Section */
 .guarantee-section {
   position: relative;
@@ -576,6 +711,19 @@ ul {
 
 .white-btn:hover {
   background-color: #ddd;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .guarantee-section {
+    height: 200px;
+  }
+  .guarantee-content h2 {
+    font-size: 1.5rem;
+  }
+  .guarantee-content p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Job Opportunities Section */
@@ -638,6 +786,25 @@ ul {
 
 .check-icon i {
   vertical-align: middle;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .job-opportunities {
+    padding: 40px 10px;
+  }
+  .job-opportunities h1 {
+    font-size: 20px;
+  }
+  .job-box {
+    padding: 10px;
+  }
+  .job-box h2 {
+    font-size: 16px;
+  }
+  .job-box p {
+    font-size: 12px;
+  }
 }
 
 /* Testimonial Section */
@@ -725,6 +892,24 @@ ul {
   background-color: #ddd;
 }
 
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .testimonial-section {
+    padding: 40px 10px;
+  }
+  .testimonial-card {
+    padding: 20px;
+  }
+  .testimonial-text {
+    font-size: 14px;
+  }
+  .nav-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
 /* Work-Life Balance Section */
 .work-life-balance-section {
   background-color: #1a1a1a;
@@ -795,6 +980,7 @@ ul {
   color: #d0dbd6;
 }
 
+/* Newsletter Section */
 .newsletter {
   display: flex;
   background-color: #1a8b7c;
@@ -855,6 +1041,35 @@ ul {
 
 .newsletter button:hover {
   background-color: #eee;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .work-life-balance-section {
+    padding: 40px 10px;
+  }
+  .work-life-balance-section h2 {
+    font-size: 20px;
+  }
+  .balance-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .balance-card {
+    width: 100%;
+    max-width: 300px;
+  }
+  .newsletter {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .newsletter p {
+    margin-bottom: 10px;
+  }
+  .newslettersection {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 /* Footer */
@@ -945,237 +1160,16 @@ footer {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-  body {
-    padding-top: 80px; /* Adjusted for fixed toggle and navbar */
-  }
-
-  .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
-
-  .navbar {
-    padding-top: 60px; /* Space for fixed toggle */
-  }
-
-  .navList {
-    display: none;
-  }
-
-  .banner-content {
-    top: 40%;
-    left: 5%;
-    max-width: 90%;
-    padding-right: 80px; /* Extra space to avoid toggle overlap */
-  }
-
-  .banner-content h1 {
-    font-size: 2rem;
-  }
-
-  .logo-container {
-    gap: 20px;
-  }
-
-  .logo-container img {
-    height: 40px;
-  }
-
-  .features-section {
-    padding: 40px 10px;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-    margin-right: 0;
-  }
-
-  .section-subtitle {
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .features-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    max-width: 90%;
-  }
-
-  .arrow-buttons {
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  .stats-section {
-    padding: 40px 10px;
-  }
-
-  .stats-title {
-    font-size: 1.5rem;
-  }
-
-  .stats-subtitle {
-    max-width: 100%;
-  }
-
-  .stats-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .stat-box {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
-  .pricing-section {
-    padding: 40px 10px;
-  }
-
-  .pricing-title {
-    font-size: 1.5rem;
-  }
-
-  .pricing-main-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .main-left, .main-right {
-    text-align: center;
-  }
-
-  .pricing-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pricing-card {
-    max-width: 100%;
-  }
-
-  .foundation-section {
-    padding: 40px 10px;
-  }
-
-  .foundation-title {
-    font-size: 1.5rem;
-  }
-
-  .foundation-subtitle {
-    max-width: 100%;
-  }
-
-  .foundation-cards {
-    flex-direction: row;
-    overflow-x: scroll;
-  }
-
-  .foundation-card {
-    width: 85vw;
-  }
-
-  .guarantee-section {
-    height: 200px;
-  }
-
-  .guarantee-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .guarantee-content p {
-    font-size: 0.9rem;
-  }
-
-  .job-opportunities {
-    padding: 40px 10px;
-  }
-
-  .job-opportunities h1 {
-    font-size: 20px;
-  }
-
-  .job-box {
-    padding: 10px;
-  }
-
-  .job-box h2 {
-    font-size: 16px;
-  }
-
-  .job-box p {
-    font-size: 12px;
-  }
-
-  .testimonial-section {
-    padding: 40px 10px;
-  }
-
-  .testimonial-card {
-    padding: 20px;
-  }
-
-  .testimonial-text {
-    font-size: 14px;
-  }
-
-  .nav-arrow {
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
-  }
-
-  .work-life-balance-section {
-    padding: 40px 10px;
-  }
-
-  .work-life-balance-section h2 {
-    font-size: 20px;
-  }
-
-  .balance-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .balance-card {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .newsletter {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .newsletter p {
-    margin-bottom: 10px;
-  }
-
-  .newslettersection {
-    width: 100%;
-    margin-left: 0;
-  }
-
   footer {
     padding: 30px 10px 10px;
   }
-
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
-
   .footer-col {
     margin-bottom: 20px;
   }
-
   .scroll-top {
     bottom: 10px;
     right: 10px;
